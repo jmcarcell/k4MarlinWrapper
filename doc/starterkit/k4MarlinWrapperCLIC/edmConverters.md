@@ -12,16 +12,16 @@ The converters are implemented as Gaudi Tools: these can be attached to any Gaud
 
 Read **EDM4hep** events:
 
-1. Instantiate the Event Service from k4FWCore: `k4DataSvc`
+1. Instantiate the Event Service from k4FWCore: `k4LegacyDataSvc`
 2. Indicate the event file to read.
 3. Then use the algorithm `PodioInput` to select the collections to read by their name.
 4. Add the algorithm `PodioInput` to the algorithm list.
 
 ```python
-from Configurables import k4DataSvc, PodioInput
+from Configurables import k4LegacyDataSvc, PodioInput
 
 # 1
-evtsvc = k4DataSvc('EventDataSvc')
+evtsvc = k4LegacyDataSvc('EventDataSvc')
 # 2
 evtsvc.input = 'path/to/file.root' 
 

@@ -1,6 +1,6 @@
 from Gaudi.Configuration import *
 
-from Configurables import LcioEvent, k4DataSvc, MarlinProcessorWrapper
+from Configurables import LcioEvent, k4LegacyDataSvc, MarlinProcessorWrapper
 from k4MarlinWrapper.parseConstants import *
 algList = []
 
@@ -15,8 +15,8 @@ parseConstants(CONSTANTS)
 # For converters
 from Configurables import ToolSvc, Lcio2EDM4hepTool, EDM4hep2LcioTool
 
-from Configurables import k4DataSvc, PodioInput
-evtsvc = k4DataSvc('EventDataSvc')
+from Configurables import k4LegacyDataSvc, PodioInput
+evtsvc = k4LegacyDataSvc('EventDataSvc')
 evtsvc.input = 'tops_edm4hep.root'
 
 inp = PodioInput('InputReader')

@@ -2,7 +2,7 @@
 
 from Gaudi.Configuration import *
 
-from Configurables import MarlinProcessorWrapper, k4DataSvc, PodioInput, EDM4hep2LcioTool
+from Configurables import MarlinProcessorWrapper, k4LegacyDataSvc, PodioInput, EDM4hep2LcioTool
 algList = []
 
 evtsvc = k4DataSvc('EventDataSvc')

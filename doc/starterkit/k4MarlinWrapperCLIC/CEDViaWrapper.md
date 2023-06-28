@@ -37,14 +37,14 @@ You should now have a `gamma_10GeV_edm4hep.root` file containing 10 events.
 
 In order to run the event display via the `DDCEDViewer` we use the Marlin wrapper and attach an EDM4hep to LCIO converter to the wrapped processor. In the following we will build the complete Gaudi options file step by step. Here we simply present the most important steps, but do not go over all details of the `DDCEDViewer` configuration, for that it is probably best to directly look at the [CEDViewer repository](https://github.com/iLCSoft/CEDViewer) directly. The complete Gaudi configuration can be found in [`k4MarlinWrapper/examples/event_display.py`](https://github.com/key4hep/k4MarlinWrapper/blob/master/k4MarlinWrapper/examples/event_display.py) which is also installed at `$K4MARLINWRAPPER/examples/event_display.py`
 
-To read EDM4hep input we use the `PodioInput` module and the `k4DataSvc`
+To read EDM4hep input we use the `PodioInput` module and the `k4LegacyDataSvc`
 ```python
 from Gaudi.Configuration import *
-from Configurables import k4DataSvc, PodioInput
+from Configurables import k4LegacyDataSvc, PodioInput
 
 algList = []
 
-evtsvc = k4DataSvc('EventDataSvc')
+evtsvc = k4LegacyDataSvc('EventDataSvc')
 evtsvc.input = ''
 
 inp = PodioInput('InputReader')

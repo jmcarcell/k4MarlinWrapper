@@ -4,7 +4,7 @@
 - Reading LCIO events with `LcioEvent()`
 - Writing LCIO events with `LcioEventOutput()`
 - Running `MarlinProcessorWrapper`s with **no** converters
-- Using `whiteboard` as `ExtSvc` (no k4DataSvc or EventDataSvc)
+- Using `whiteboard` as `ExtSvc` (no k4LegacyDataSvc or EventDataSvc)
 
 **Not supported**
 - Using EDM converters `EDM4hep2LcioTool` and `Lcio2EDM4hepTool()`
